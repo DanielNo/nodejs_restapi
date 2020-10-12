@@ -1,0 +1,22 @@
+{
+  "name": "nodejs_restapi",
+  "version": "1.0.0",
+  "description": "Learn nodejs+express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://DanielNo@github.com/DanielNo/nodejs_restapi.git"
+  },
+  "author": "Daniel No",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanielNo/nodejs_restapi/issues"
+  },
+  "homepage": "https://github.com/DanielNo/nodejs_restapi#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
