@@ -1,5 +1,7 @@
 const express = require('express')
 const app = express()
+const morgan = require('morgan')
+app.use(morgan('combined'))
 
 app.get("/",(req,res) =>{
    console.log("responding to root route")
