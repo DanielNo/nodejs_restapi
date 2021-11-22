@@ -3,6 +3,7 @@ const app = express()
 const morgan = require('morgan')
 app.use(morgan('combined'))
 
+
 app.get("/",(req,res) =>{
    console.log("responding to root route")
    res.send("hello from root!") 
@@ -15,16 +16,18 @@ app.get("/users",(req,res) =>{
 
  })
 
+ var users = { 1: {"first" : "aaron", "last" : "rodgers"} }
 
 // Query Param
-// http://localhost:3003/user/id=100
+// http://localhost:3003/user/id=1
 app.get("/user/:id",(req,res) =>{
-   var user1 = {firstName: "Lebron", lastName: "Jamessss"}
-   var user2 = {firstName: "Kevin", lastName: "Durant"}
-   res.json([user1,user2])
-   var query = req.query
-   console.log(query)
+   let id = req.query.id
+   if (users["1"]){
+      res.json(users)
 
+   }else{
+      res.status(404).send('File not found')
+   }
 })
 
  
