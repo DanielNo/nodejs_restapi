@@ -14,6 +14,19 @@ app.get("/users",(req,res) =>{
     res.json([user1,user2])
 
  })
+
+
+// Query Param
+// http://localhost:3003/user/id=100
+app.get("/user/:id",(req,res) =>{
+   var user1 = {firstName: "Lebron", lastName: "Jamessss"}
+   var user2 = {firstName: "Kevin", lastName: "Durant"}
+   res.json([user1,user2])
+   var query = req.query
+   console.log(query)
+
+})
+
  
 
 app.listen(3003,() => {
