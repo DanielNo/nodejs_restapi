@@ -22,11 +22,16 @@ app.get("/users",(req,res) =>{
 // http://localhost:3003/user/id=1
 app.get("/user/:id",(req,res) =>{
    let id = req.query.id
-   if (users["1"]){
+   var idNum = req.params.id
+   console.log(idNum)
+
+   var test = Number(id)
+
+   if (users[test]){
       res.json(users)
 
    }else{
-      res.status(404).send('File not found')
+      res.status(404).send('User not found')
    }
 })
 
