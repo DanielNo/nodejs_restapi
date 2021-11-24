@@ -1,5 +1,10 @@
 To start the server:
 nodemon app.js
+or
+node app.js
+
+- Using nodemon will reboot the server when files are saved on vs code. 
+
 
 To kill the server:
 ctrl + c in terminal
